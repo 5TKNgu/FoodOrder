@@ -7,7 +7,7 @@
             "description": "Bít tết bò Mỹ thơm ngon, đậm đà và mềm mại.",
             "category": "beefsteak",
             "rating": 4.8,
-            "image":"https://denhatfoods.com/thucpham_thihang_t5/upload/images/dui-beefsteak-bo-uc-topside-inside-1.jpg"
+            "image": "image/id_1.jpg"
         },
         {
             "id": 2,
@@ -15,7 +15,8 @@
             "price": 135000,
             "description": "Bít tết bò Úc chất lượng cao, mềm và thơm lừng.",
             "category": "beefsteak",
-            "rating": 4.7
+            "rating": 4.7,
+            "image": "image/id_2.jpg"
         },
         {
             "id": 3,
@@ -23,7 +24,8 @@
             "price": 145000,
             "description": "Bít tết sườn cừu nướng đậm vị, hấp dẫn.",
             "category": "beefsteak",
-            "rating": 4.6
+            "rating": 4.6,
+            "image": "image/id_3.jpg"
         },
         {
             "id": 4,
@@ -31,7 +33,8 @@
             "price": 130000,
             "description": "Bít tết bò sốt tiêu cay nồng, hấp dẫn.",
             "category": "beefsteak",
-            "rating": 4.5
+            "rating": 4.5,
+            "image": "image/id_4.jpg"
         },
         {
             "id": 5,
@@ -39,7 +42,8 @@
             "price": 120000,
             "description": "Bít tết bò sốt nấm đậm đà, thích hợp cho mọi người.",
             "category": "beefsteak",
-            "rating": 4.5
+            "rating": 4.5,
+            "image": "image/id_5.jpg"
         },
         {
             "id": 6,
@@ -47,31 +51,35 @@
             "price": 64000,
             "description": "Món salad cá ngừ ở các nhà hàng đồ ăn Tây hấp dẫn nhiều người.",
             "category": "salad",
-            "rating": 4.5
+            "rating": 4.5,
+            "image": "image/id_6.jpg"
         },
         {
             "id": 7,
             "name": "salad gà giòn",
             "price": 54000,
             "description": "Món Salad Gà Giòn với thành phần gồm rau cải bắp thái sợi chỉ, kết hợp với chà bông gà giòn tưới dẫm nước sốt được chế biến theo công thức bí mật",
+            "category": "salad",
             "rating": 4.9,
-            "image": "salad.png"
+            "image": "image/id_7.jpg"
         },
         {
             "id": 8,
-            "name": "cơm gà xối mỡ",
+            "name": "cơm bò lúc lắc",
             "price": 50000,
-            "description": "Cơm gà xối mỡ giòn tan, hấp dẫn.",
+            "description": "Cơm bò lúc lắc, hấp dẫn.",
             "category": "rice",
-            "rating": 4.5
+            "rating": 4.5,
+            "image": "image/id_8.jpg"
         },
         {
             "id": 9,
-            "name": "cơm sườn nướng",
+            "name": "cơm sườn heo nướng sốt BBQ",
             "price": 55000,
             "description": "Cơm sườn nướng đậm đà, ngon miệng.",
             "category": "rice",
-            "rating": 4.6
+            "rating": 4.6,
+            "image": "image/id_9.jpg"
         },
         {
             "id": 10,
@@ -79,7 +87,8 @@
             "price": 90000,
             "description": "Pizza bò với lớp thịt bò mềm mịn, phủ phô mai.",
             "category": "pizza",
-            "rating": 4.7
+            "rating": 4.7,
+            "image": "image/id_10.jpg"
         },
         {
             "id": 11,
@@ -87,7 +96,8 @@
             "price": 95000,
             "description": "Pizza hải sản với các loại hải sản tươi ngon.",
             "category": "pizza",
-            "rating": 4.8
+            "rating": 4.8,
+            "image": "image/id_11.jpg"
         },
         {
             "id": 12,
@@ -95,7 +105,8 @@
             "price": 40000,
             "description": "Soup kem hải sản béo ngậy, đầy hương vị biển.",
             "category": "soup",
-            "rating": 4.7
+            "rating": 4.7,
+            "image": "image/id_12.jpg"
         },
         {
             "id": 13,
@@ -103,129 +114,155 @@
             "price": 35000,
             "description": "Soup kem cà rốt thanh đạm, ngọt dịu.",
             "category": "soup",
-            "rating": 4.5
+            "rating": 4.5,
+            "image": "image/id_13.jpg"
         },
         {
             "id": 14,
             "name": "bò lúc lắc",
             "price": 85000,
             "description": "Bò lúc lắc thơm ngon, mềm mại và đậm vị.",
-            "category": "main",
-            "rating": 4.8
+            "category": "side dishes",
+            "rating": 4.8,
+            "image": "image/id_14.jpg"
         },
         {
             "id": 15,
             "name": "khoai tây chiên",
             "price": 30000,
             "description": "Khoai tây chiên giòn tan, thích hợp ăn kèm.",
-            "category": "side",
-            "rating": 4.6
+            "category": "side dishes",
+            "rating": 4.6,
+            "image": "image/id_15.jpg"
         },
         {
             "id": 16,
-            "name": "combo 1: beefsteak và nước",
-            "price": 140000,
-            "description": "Combo gồm một món beefsteak và một nước uống.",
-            "category": "combo",
-            "rating": 4.8
+            "name": "Nui sốt phô mai đút lò",
+            "price": 45000,
+            "description": "Nui đút lò sốt phô mai thơm ngon, béo ngậy.",
+            "category": "side dishes",
+            "rating": 4.7,
+            "image": "image/id_16.jpg"
         },
         {
             "id": 17,
-            "name": "combo 2: bữa ăn 2 người",
-            "price": 280000,
-            "description": "Combo gồm 1 beefsteak, 1 pizza, 1 soup, gà không xương và xúc xích Đức.",
-            "category": "combo",
-            "rating": 4.9
+            "name": "mì Ý sốt cà chua",
+            "price": 60000,
+            "description": "Mì Ý sốt cà chua tươi ngon, đậm vị.",
+            "category": "pasta",
+            "rating": 4.8,
+            "image": "image/id_17.jpg"
         },
         {
             "id": 18,
+            "name": "mì Ý sốt kem hải sản",
+            "price": 75000,
+            "description": "Mì Ý kết hợp hải sản tươi ngon trong nước sốt kem béo ngậy.",
+            "category": "pasta",
+            "rating": 4.7,
+            "image": "image/id_18.jpg"
+        },
+        {
+            "id": 19,
+            "name": "combo 1: Phần ăn đơn ",
+            "price": 200000,
+            "description": "Combo gồm một món beefsteak bò mỹ + 1 mì ý sốt hải sản + 1 nước ngọt.",
+            "category": "combo",
+            "rating": 4.8,
+            "image": "image/id_19.jpg"
+        },
+        {
+            "id": 20,
+            "name": "combo 2: Phần ăn dành cho 2",
+            "price": 450000,
+            "description": "Combo gồm Steak bò mỹ + lườn ngỗng + xúc xích + 1 mỳ ý/soup tự chọn, 1 salad tự chọn, 2 nước ngọt.",
+            "category": "combo",
+            "rating": 5.0,
+            "image": "image/id_20.png"
+        },
+        {
+            "id": 21,
             "name": "nước cam ép",
             "price": 20000,
             "description": "Nước cam ép tươi mát, giải nhiệt.",
             "category": "drink",
-            "rating": 4.9
+            "rating": 4.9,
+            "image": "image/id_21.png"
         },
         {
-            "id": 19,
+            "id": 22,
             "name": "nước chanh dây",
             "price": 18000,
             "description": "Nước chanh dây ngọt thanh, bổ dưỡng.",
             "category": "drink",
-            "rating": 4.7
+            "rating": 4.7,
+            "image": "image/id_22.png"
         },
         {
-            "id": 20,
-            "name": "nước ép táo",
-            "price": 19000,
-            "description": "Nước ép táo tươi ngon, giàu dinh dưỡng.",
-            "category": "drink",
-            "rating": 4.6
-        },
-        {
-            "id": 21,
+            "id": 23,
             "name": "soda việt quất",
-            "price": 22000,
+            "price": 27000,
             "description": "Soda việt quất mát lạnh, sảng khoái.",
             "category": "drink",
-            "rating": 4.8
+            "rating": 4.8,
+            "image": "image/id_23.png"
         },
         {
-            "id": 22,
+            "id": 24,
             "name": "trà đào",
             "price": 25000,
             "description": "Trà đào thơm ngon, hấp dẫn.",
             "category": "drink",
-            "rating": 4.9
+            "rating": 4.9,
+            "image": "image/id_24.png"
+        },
+
+        {
+            "id": 25,
+            "name": "trà vải",
+            "price": 15000,
+            "description": "Trà vải thanh mát, giải nhiệt.",
+            "category": "drink",
+            "rating": 4.6,
+            "image": "image/id_25.png"
         },
         {
-            "id": 23,
+            "id": 26,
+            "name": "trà dâu tươi",
+            "price": 17000,
+            "description": "Trà dâu tươi ngon, ngọt dịu.",
+            "category": "drink",
+            "rating": 4.7,
+            "image": "image/id_26.png"
+        },
+        {
+            "id": 27,
             "name": "sinh tố dâu",
             "price": 26000,
             "description": "Sinh tố dâu tươi ngon, giàu vitamin.",
             "category": "drink",
-            "rating": 4.7
+            "rating": 4.7,
+            "image": "image/id_27.png"
         },
+
         {
-            "id": 24,
+            "id": 28,
             "name": "sinh tố bơ",
             "price": 28000,
             "description": "Sinh tố bơ béo ngậy, bổ dưỡng.",
             "category": "drink",
-            "rating": 4.8
+            "rating": 4.8,
+            "image": "image/id_28.png"
         },
+    
         {
-            "id": 25,
-            "name": "cà phê đen",
-            "price": 15000,
-            "description": "Cà phê đen nguyên chất, đậm đà.",
-            "category": "drink",
-            "rating": 4.6
-        },
-        {
-            "id": 26,
-            "name": "cà phê sữa",
-            "price": 17000,
-            "description": "Cà phê sữa béo ngậy, thơm ngon.",
-            "category": "drink",
-            "rating": 4.7
-        },
-        {
-            "id":27,
-            "name":"nước ngọt",
+            "id": 29,
+            "name": "nước ngọt",
             "price": 10000,
-            "description": "coca-cola, pepsi, sprite,red bull.",
+            "description": "Coca-Cola, Pepsi, 7Up.",
             "category": "drink",
-            "rating": 4.7
-        },
-        {
-            "id": 28,
-            "name": "SET 1",
-            "price": 40000,
-            "description": "1.Steak bò mỹ + lườn ngỗng + xúc xích + 1 mỳ ý/soup tự chọn, 1 salad tự chọn, 1 nước ngọt.",
-            "category": "combo",
-            "rating": 5.0,
-            "image":"http://cowexpress.com/images/menu/SET%203.png"
+            "rating": 4.7,
+            "image": "image/id_29.png"
         }
-
     ]
 }
