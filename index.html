@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html data-theme="cupcake" lang="en">
+<html lang="en" data-theme="cupcake">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&family=Playwrite+NZ:wght@100..400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&family=Playwrite+NZ:wght@100..400&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
   <title>FunnyBeef</title>
   <link rel="stylesheet" href="style.css">
@@ -14,64 +16,113 @@
 </head>
 
 <body>
-  <div class="navbar bg-yellow-50">
-    <button id="menuButton" tabindex="0" class="md:hidden btn btn-ghost">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24"
-        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <line x1="4" y1="8" x2="20" y2="8" />
-        <line x1="4" y1="16" x2="20" y2="16" />
-      </svg>
-    </button>
-    <div id="menuOverlay" class="hidden fixed inset-y-0 left-0 h-1/2 w-1/3 bg-yellow-50 bg-opacity-50 z-50 top-16 rounded-xl">
-      <div class="flex flex-col items-center justify-center h-full">
-        <div class="flex flex-col gap-2">
-          <a class="btn btn-ghost" href="./pages/home.html">Trang chủ</a>
-          <a class="btn btn-ghost" href="./pages/menu.html">Thực đơn</a>
-          <a class="btn btn-ghost" href="./pages/contact.html">Liên hệ</a>
-        </div>
-      </div>
-    </div>    
+  <div class="navbar fixed bg-yellow-50 z-20">
+    <div class="dropdown">
+      <label tabindex="0" class="md:hidden btn btn-ghost btn-circle" id="dropdownButton">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+        </svg>
+      </label>
+      <ul id="dropdownContent"
+        class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-yellow-50 rounded-box w-52">
+        <li><a href="#home" class="btn btn-ghost">Trang chủ</a></li>
+        <li>
+          <a href="#menu" class="btn btn-ghost">
+            Thực đơn
+          </a>
+        </li>
+        <li><a href="#contact" class="btn btn-ghost">Liên hệ</a></li>
+        <li><a href="#description" class="btn btn-ghost">Về chúng tôi</a></li>
+        <li><a href="#" class="btn btn-ghost">Fanpage</a></li>
+      </ul>
+    </div>
     <div class="flex-1">
       <a class="btn btn-ghost text-xl">
         FunnyBeef
-        <img src="./public/logo.png" alt="logo" class="w-8 h-8" />        
+        <img src="./public/logo.png" alt="logo" class="w-8 h-8" />
       </a>
     </div>
     <div id="mdNavbar" class="hidden md:flex">
-      <a class="btn btn-ghost" href="./pages/home.html">Trang chủ</a>
-      <a class="btn btn-ghost" href="./pages/menu.html">Thực đơn</a>
-      <a class="btn btn-ghost" href="./pages/contact.html">Liên hệ</a>
+      <a class="btn btn-ghost" href="#home">Trang chủ</a>
+      <a class="btn btn-ghost" href="#menu">Thực đơn</a>
+      <a class="btn btn-ghost" href="#contact">Liên hệ</a>
     </div>
     <div id="cart" class="md:pr-10 md:pl-10 xl:pr-10">
-      <div tabindex="0" role="button" class="indicator btn btn-ghost btn-circle">
-        <div class="indicator-item badge badge-secondary">19</div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="48"
-          height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <circle cx="9" cy="19" r="2" />
-          <circle cx="17" cy="19" r="2" />
-          <path d="M17 17h-11v-14h-2" />
-          <path d="M6 5l14 1l-1 7h-13" />
-        </svg>
+      <a href="/cart.html">
+        <div tabindex="0" role="button" class="indicator btn btn-ghost btn-circle">
+          <div id="badgeCart" class="indicator-item badge badge-secondary">0</div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="48"
+            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="9" cy="19" r="2" />
+            <circle cx="17" cy="19" r="2" />
+            <path d="M17 17h-11v-14h-2" />
+            <path d="M6 5l14 1l-1 7h-13" />
+          </svg>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  <section id="home" class="pt-24 mb-6 bg-white p-4 rounded shadow relative">
+    <div class="flex flex-col md:flex-row justify-center items-center w-full">
+      <div class="flex flex-col justify-center items-center text-black text-center w-full xl:gap-3 relative md:w-1/2">
+        <h2 class="font-bold text-4xl md:text-5xl">FunnyBeef</h2>
+        <p id="typing" class="text-xl md:text-3xl pt-2 text-center text-gray-800 relative inline-block">
+        </p>
+        <a href="#menu">
+          <button class="btn primary-second mt-4 bg-yellow-50 px-6 py-2 rounded-lg">
+            Xem thực đơn
+          </button>
+        </a>
+      </div>
+      <img src="image/best.jpg" alt="best_seller" class="rounded-full md:w-1/2 lg:w-1/3 mt-6 md:mt-0" />
+    </div>
+  </section>
+  <div class="border-t border-gray-300 my-6"></div>
+  <section id="menu" class="mb-6 bg-white p-4 rounded shadow">
+    <div id="card-container" class=" top-20 px-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    </div>
+    <div class="flex justify-center mt-6">
+      <a href="#menu">
+        <button id="prev" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 cursor-pointer"
+          disabled>Trang trước</button>
+        <button id="next"
+          class="bg-yellow-500 text-white px-4 py-2 rounded-lg ml-4 hover:bg-yellow-600 cursor-pointer">Trang
+          sau</button>
+      </a>
+    </div>
+  </section>
+
+  <div class=" border-t border-gray-300 my-6"></div>
+  <section id="description" class="mb-6 bg-white p-6 rounded-lg shadow-lg">
+    <div class="flex justify-center w-full">
+      <div id="descriptionContent"
+        class="flex flex-col justify-center items-center pt-10 text-black text-center w-full xl:max-w-2xl">
+        <h2 class="font-bold text-4xl mb-4 text-yellow-500">Về chúng tôi</h2>
+        <p class="text-xl leading-relaxed text-gray-700">
+          <span class="font-semibold">FunnyBeef - Nơi Hương Vị Gặp Nụ Cười</span><br>
+          Tọa lạc giữa lòng thành phố, FunnyBeef mang đến trải nghiệm ẩm thực độc đáo. Không gian ấm cúng, trang trí hài
+          hước, và thực đơn phong phú với các món bò ngon lành khiến mọi người không thể không cười. Chủ nhân, anh Minh,
+          luôn sáng tạo những món ăn đi kèm với những câu đùa dí dỏm. Đến với FunnyBeef, bạn không chỉ thưởng thức bữa
+          ăn mà còn tận hưởng những khoảnh khắc vui vẻ bên bạn bè và gia đình!
+        </p>
       </div>
     </div>
-  </div>
-  <div id="best seller" class="flex justify-center relative w-full">
-    <div id="homeContent" class="flex flex-col justify-center items-center absolute pt-20 text-white text-center w-full xl:gap-3">
-      <h2 class="font-bold text-4xl">FunnyBeef</h2>
-      <p class="text-2xl">Chưa nghĩ ra</p>
-      <button class="btn primary-second mt-4 bg-yellow-50">
-        Xem thực đơn
-      </button>
+    <div class="flex justify-center pt-5">
+      <img src="./public/chef.png">
     </div>
-    <img src="image/best.jpg" alt="best_seller" class="rounded-full" />
-  </div>
-  
+  </section>
 
-
+  <footer>
+    <div class="bg-yellow-50 p-4 text-center">
+      <p class="text-gray-800">FunnyBeef &copy; 2021</p>
+      <p>
+        Website by <a href="https://www.facebook.com/phuong0ngu" class="text-blue-500">Nguyễn Tấn Phương</a>
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>

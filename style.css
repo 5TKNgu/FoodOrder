@@ -14,3 +14,23 @@
 .slide-in {
   animation: slideIn 0.3s ease forwards;
 }
+
+.typing {
+  border-right: 2px solid currentColor;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+#popup {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#popup.show {
+  opacity: 1;
+  visibility: visible;
+}
