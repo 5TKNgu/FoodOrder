@@ -178,7 +178,7 @@
             "description": "Combo gồm Steak bò mỹ + lườn ngỗng + xúc xích + 1 mỳ ý/soup tự chọn, 1 salad tự chọn, 2 nước ngọt.",
             "category": "combo",
             "rating": 5.0,
-            "image": "image/id_20.png"
+            "image": "image/id_20.jpg"
         },
         {
             "id": 21,
@@ -187,7 +187,7 @@
             "description": "Nước cam ép tươi mát, giải nhiệt.",
             "category": "drink",
             "rating": 4.9,
-            "image": "image/id_21.png"
+            "image": "image/id_21.jpg"
         },
         {
             "id": 22,
@@ -196,7 +196,7 @@
             "description": "Nước chanh dây ngọt thanh, bổ dưỡng.",
             "category": "drink",
             "rating": 4.7,
-            "image": "image/id_22.png"
+            "image": "image/id_22.jpg"
         },
         {
             "id": 23,
@@ -205,7 +205,7 @@
             "description": "Soda việt quất mát lạnh, sảng khoái.",
             "category": "drink",
             "rating": 4.8,
-            "image": "image/id_23.png"
+            "image": "image/id_23.jpg"
         },
         {
             "id": 24,
@@ -214,7 +214,7 @@
             "description": "Trà đào thơm ngon, hấp dẫn.",
             "category": "drink",
             "rating": 4.9,
-            "image": "image/id_24.png"
+            "image": "image/id_24.jpg"
         },
 
         {
@@ -224,7 +224,7 @@
             "description": "Trà vải thanh mát, giải nhiệt.",
             "category": "drink",
             "rating": 4.6,
-            "image": "image/id_25.png"
+            "image": "image/id_25.jpg"
         },
         {
             "id": 26,
@@ -233,7 +233,7 @@
             "description": "Trà dâu tươi ngon, ngọt dịu.",
             "category": "drink",
             "rating": 4.7,
-            "image": "image/id_26.png"
+            "image": "image/id_26.jpg"
         },
         {
             "id": 27,
@@ -242,7 +242,7 @@
             "description": "Sinh tố dâu tươi ngon, giàu vitamin.",
             "category": "drink",
             "rating": 4.7,
-            "image": "image/id_27.png"
+            "image": "image/id_27.jpg"
         },
 
         {
@@ -252,7 +252,7 @@
             "description": "Sinh tố bơ béo ngậy, bổ dưỡng.",
             "category": "drink",
             "rating": 4.8,
-            "image": "image/id_28.png"
+            "image": "image/id_28.jpg"
         },
     
         {
@@ -262,7 +262,7 @@
             "description": "Coca-Cola, Pepsi, 7Up.",
             "category": "drink",
             "rating": 4.7,
-            "image": "image/id_29.png"
+            "image": "image/id_29.jpg"
         }
     ]
 }
