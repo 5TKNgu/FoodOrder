@@ -23,11 +23,11 @@ function renderCart() {
                 <p class="text-gray-600">Giá: ${item.price.toLocaleString()} VNĐ</p>
                 <div class="flex items-center justify-between mt-2">
                     <div class="flex items-center">
-                        <button class="btn btn-red" onclick="changeQuantity(${item.id}, -1)">-</button>
+                        <button class="btn btn-red bg-yellow-100" onclick="changeQuantity(${item.id}, -1)">-</button>
                         <span class="mx-2">${item.quantity}</span>
-                        <button class="btn btn-green" onclick="changeQuantity(${item.id}, 1)">+</button>
+                        <button class="btn btn-green bg-yellow-100" onclick="changeQuantity(${item.id}, 1)">+</button>
                     </div>
-                    <button class="btn btn-red mt-2" onclick="removeFromCart(${item.id})">Xóa</button>
+                    <button class="btn btn-red mt-2 bg-red-100" onclick="removeFromCart(${item.id})">Xóa</button>
                 </div>
             </div>
         `;

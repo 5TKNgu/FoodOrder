@@ -2,6 +2,12 @@ FoodOrder
 
 Tham khảo: https://www.beefsteakveggies.com/
 
+##### Demo
+<img src="./demo/home.png" alt="demo" width="100%">
+<img src="./demo/menu.png" alt="demo" width="100%">
+<img src="./demo/description.png" alt="demo" width="100%">
+<img src="./demo/emty_cart.png" alt="demo" width="100%">
+<img src="./demo/cart.png" alt="demo" width="100%">
 Installation
 To install the project, follow these steps:
 
