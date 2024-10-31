@@ -38,8 +38,7 @@ Trang web đặt món ăn online, cho phép người dùng xem menu, thêm món 
 
 ###### Chức năng
 - [x] Navbar
-- [ ] Home page
-- [ ] Cart page
-- [ ] Menu page
-- [ ] Order page
+- [x] Home page
+- [x] Cart page
+- [x] Menu page
 - [ ] Checkout page
