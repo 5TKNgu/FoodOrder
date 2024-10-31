@@ -38,12 +38,17 @@ function renderCart() {
 
 function renderPaymentBox() {
     var paymentBox = document.getElementById("ulProducts");
+    paymentBox.innerHTML = '';
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     cart.forEach(item => {
-        paymentBox.innerHTML = `
-            <li>${item.name} x ${item.quantity}</li>
+        const liProduct = document.createElement('li');
+
+        liProduct.innerHTML = `
+            ${item.name} x ${item.quantity}
         `;
+
+        paymentBox.appendChild(liProduct)
     });
 }
 
