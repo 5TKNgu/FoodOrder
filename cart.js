@@ -6,7 +6,7 @@ function renderCart() {
 
     if (cart.length === 0) {
         const emptyCart = document.getElementById('cartEmpty');
-        const payment = document.getElementById('payment');
+        const payment = document.getElementById('paymentContainer');
         payment.classList.add('hidden');
         emptyCart.classList.remove('hidden');
         return;
@@ -36,6 +36,17 @@ function renderCart() {
     });
 }
 
+function renderPaymentBox() {
+    var paymentBox = document.getElementById("ulProducts");
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cart.forEach(item => {
+        paymentBox.innerHTML = `
+            <li>${item.name} x ${item.quantity}</li>
+        `;
+    });
+}
+
 window.changeQuantity = function(foodId, change) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const item = cart.find(item => item.id === foodId);
@@ -46,8 +57,7 @@ window.changeQuantity = function(foodId, change) {
             removeFromCart(foodId);
         } else {
             localStorage.setItem('cart', JSON.stringify(cart));
-            renderCart();
-            updateTotal();
+            updatePage();
         }
     }
 }
@@ -69,17 +79,20 @@ function updateBadgeCart() {
     badgeCart.innerHTML = cart.length;
 }
 
+function updatePage() {
+    renderCart();
+    updateTotal();
+    updateBadgeCart();
+    renderPaymentBox();
+}
+
 window.removeFromCart = function(foodId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart = cart.filter(item => item.id !== foodId);
     localStorage.setItem('cart', JSON.stringify(cart));
-    renderCart();
-    updateTotal();
-    updateBadgeCart();
+    updatePage();
 };
 
 window.onload = function() {
-    renderCart();
-    updateTotal();
-    updateBadgeCart();
+    updatePage();
 }

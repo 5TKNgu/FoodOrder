@@ -10,39 +10,6 @@ async function fetchData() {
     updateButtons();
 }
 
-function animateCardToCart(imageSrc) {
-    const img = document.createElement('img');
-    img.src = imageSrc;
-    img.style.position = 'fixed';
-    img.style.width = '50px'; // Kích thước hình ảnh
-    img.style.opacity = '0.7'; // Độ mờ
-    img.style.pointerEvents = 'none'; // Không cho phép tương tác
-    document.body.appendChild(img);
-    
-    // Tính toán vị trí của nút giỏ hàng
-    const cart = document.querySelector('#cart');
-    const cartRect = cart.getBoundingClientRect();
-    const startX = window.innerWidth / 2; // Vị trí trung tâm
-    const startY = window.innerHeight / 2; // Vị trí trung tâm
-    const endX = cartRect.left + cartRect.width / 2;
-    const endY = cartRect.top + cartRect.height / 2;
-
-    // Animation
-    img.animate([
-        { transform: `translate(${startX - endX}px, ${startY - endY}px)`, opacity: 0.7 },
-        { transform: `translate(0, 0)`, opacity: 0 }
-    ], {
-        duration: 1000,
-        easing: 'ease-in-out',
-        fill: 'forwards'
-    });
-
-    // Xóa hình ảnh sau khi animation kết thúc
-    setTimeout(() => {
-        img.remove();
-    }, 1000);
-}
-
 function renderCards(page) {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
