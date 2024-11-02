@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunnyBeef</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Lobster&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <script type="module" src="../scripts/"></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <div class="navbar fixed bg-yellow-50 z-20">
+        <div class="dropdown">
+            <label tabindex="0" class="md:hidden btn btn-ghost btn-circle" id="dropdownButton">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </label>
+            <ul id="dropdownContent"
+                class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-yellow-50 rounded-box w-52">
+                <li><a href="../index.html" class="btn btn-ghost">Trang chủ</a></li>
+                <li>
+                    <a href="../index.html#menu" class="btn btn-ghost">
+                        Thực đơn
+                    </a>
+                </li>
+                <li><a href="../index.html#contact" class="btn btn-ghost">Liên hệ</a></li>
+                <li><a href="../index.html#description" class="btn btn-ghost">Về chúng tôi</a></li>
+                <li><a href="#" class="btn btn-ghost">Fanpage</a></li>
+            </ul>
+        </div>
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl font-lobster" href="../index.html">
+                FunnyBeef
+                <img src="../public/logo.png" alt="logo" class="w-8 h-8" />
+            </a>
+        </div>
+        <div id="mdNavbar" class="hidden md:flex">
+            <a class="btn btn-ghost" href="../index.html#home">Trang chủ</a>
+            <a class="btn btn-ghost" href="../index.html#menu">Thực đơn</a>
+            <a class="btn btn-ghost" href="../index.html#contact">Liên hệ</a>
+        </div>
+        <div id="cart" class="md:pr-10 md:pl-10 xl:pr-10">
+            <a href="http://localhost:5713/pages/cart">
+                <div tabindex="0" role="button" class="indicator btn btn-ghost btn-circle">
+                    <div id="badgeCart" class="indicator-item badge badge-secondary">0</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                        width="48" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <circle cx="9" cy="19" r="2" />
+                        <circle cx="17" cy="19" r="2" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="cartEmpty" class="hidden text-center pt-24">
+        <div class="text-2xl font-bold">Giỏ hàng trống</div>
+        <div class="text-lg">Hãy chọn món ăn yêu thích của bạn</div>
+        <img src="../public/empty_cart.png" alt="Empty cart" class="mx-auto my-4">
+        <div class="md:flex justify-center">
+            <a href="../index.html" class="btn btn-primary mt-4">Xem thực đơn</a>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        <div id="cartEmpty" class="hidden text-center">
+            <div class="text-2xl font-bold">Giỏ hàng trống</div>
+            <div class="text-lg">Hãy chọn món ăn yêu thích của bạn</div>
+            <img src="../public/empty_cart.png" alt="Empty cart" class="mx-auto my-4">
+            <div class="md:flex justify-center">
+                <a href="../index.html" class="btn btn-primary mt-4">Xem thực đơn</a>
+            </div>
+        </div>
+        <div id="cartContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        </div>
+    </main>
+
+    <div id="paymentContainer" class="border border-gray-300 rounded-lg p-4">
+        <p class="text-l font-semibold mb-2">Sản phẩm trong giỏ hàng</p>
+        <div id="products">
+            <ul id="ulProducts" class="list-disc list-inside">
+
+            </ul>
+        </div>
+        <div class="flex justify-between">
+            <div class="flex items-center">
+                <div id="total" class="text-xl ml-2">0</div>
+            </div>
+            <a href="/checkout.html" class="btn btn-primary bg-yellow-500">Thanh toán</a>
+        </div>
+    </div>
+    <footer class="bg-yellow-50 text-center p-4">
+        <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
+        <p>
+            Website by <a href="https://www.facebook.com/phuong0ngu" class="text-blue-500">Nguyễn Tấn Phương</a>
+        </p>
+    </footer>
+</body>
+
+</html>
