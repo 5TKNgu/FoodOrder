@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Lobster&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../scripts/checkout.js"></script>
+    <title>FunnyBeef</title>
 </head>
-<body>
-    
+
+<body class="flex flex-col min-h-screen">
+    <div class="navbar fixed bg-yellow-50 z-20">
+        <div class="dropdown">
+            <label tabindex="0" class="md:hidden btn btn-ghost btn-circle" id="dropdownButton">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </label>
+            <ul id="dropdownContent"
+                class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-yellow-50 rounded-box w-52">
+                <li><a href="../index.html" class="btn btn-ghost">Trang chủ</a></li>
+                <li>
+                    <a href="../index.html#menu" class="btn btn-ghost">
+                        Thực đơn
+                    </a>
+                </li>
+                <li><a href="../index.html#contact" class="btn btn-ghost">Liên hệ</a></li>
+                <li><a href="../index.html#description" class="btn btn-ghost">Về chúng tôi</a></li>
+                <li><a href="#" class="btn btn-ghost">Fanpage</a></li>
+            </ul>
+        </div>
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl font-lobster" href="../index.html">
+                FunnyBeef
+                <img src="../public/logo.png" alt="logo" class="w-8 h-8" />
+            </a>
+        </div>
+        <div id="mdNavbar" class="hidden md:flex">
+            <a class="btn btn-ghost" href="../index.html#home">Trang chủ</a>
+            <a class="btn btn-ghost" href="../index.html#menu">Thực đơn</a>
+            <a class="btn btn-ghost" href="../index.html#contact">Liên hệ</a>
+        </div>
+        <div id="cart" class="md:pr-10 md:pl-10 xl:pr-10">
+            <a href="/cart">
+                <div tabindex="0" role="button" class="indicator btn btn-ghost btn-circle">
+                    <div id="badgeCart" class="indicator-item badge badge-secondary">0</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                        width="48" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <circle cx="9" cy="19" r="2" />
+                        <circle cx="17" cy="19" r="2" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="pt-20">
+        <div class="px-3 flex flex-col items-center justify-center">
+            <h1 class="text-3xl font-playwrite">Thanh toán</h1>
+            <form class="w-full max-w-lg mt-5">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-first-name">
+                            Họ
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-first-name" type="text" placeholder="Nguyễn">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-last-name">
+                            Tên
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-last-name" type="text" placeholder="Phương">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-password">
+                            Địa chỉ
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-password" type="text" placeholder="123 Đường ABC, Phường XYZ, Quận 1">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-city">
+                            Thành phố
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-city" type="text" placeholder="Hồ Chí Minh">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="paymentBox" class="border border-gray-300 rounded-lg p-4">
+        <p class="text-l font-semibold mb-2">Sản phẩm trong giỏ hàng</p>
+        <div id="products">
+            <ul id="ulProducts" class="list-disc list-inside">
+            </ul>
+        </div>
+        <div class="flex justify-end mt-4">
+            <div class="flex items-center">
+                <div id="total" class="text-xl ml-2">0</div>
+            </div>
+            <div class="ml-4">
+                <a href="#" class="btn btn-primary bg-yellow-500">Đặt hàng</a>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-yellow-50 text-center p-4">
+        <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
+        <p>
+            Website by <a href="https://www.facebook.com/phuong0ngu" class="text-blue-500">Nguyễn Tấn Phương</a>
+        </p>
+    </footer>
 </body>
+
 </html>
