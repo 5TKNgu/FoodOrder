@@ -15,19 +15,20 @@ function renderCart() {
     cart.forEach(item => {
         const card = document.createElement('div');
         card.className = 'card bg-white rounded-lg shadow-md p-4';
-
         card.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" class="w-full h-32 object-cover rounded-t-lg mx-auto">
+            <img src="../${item.image}" alt="${item.name}" class="w-full h-32 object-cover rounded-t-lg mx-auto">
             <div class="p-4">
                 <h2 class="font-bold text-lg">${item.name}</h2>
                 <p class="text-gray-600">Giá: ${item.price.toLocaleString()} VNĐ</p>
                 <div class="flex items-center justify-between mt-2">
                     <div class="flex items-center">
                         <button class="btn btn-red bg-yellow-100" onclick="changeQuantity(${item.id}, -1)">-</button>
-                        <span class="mx-2">${item.quantity}</span>
+                        <span class="mx-2 px-3">${item.quantity}</span>
                         <button class="btn btn-green bg-yellow-100" onclick="changeQuantity(${item.id}, 1)">+</button>
                     </div>
-                    <button class="btn btn-red mt-2 bg-red-100" onclick="removeFromCart(${item.id})">Xóa</button>
+                    <div class="ml-4">
+                        <button class="btn btn-red bg-red-100" onclick="removeFromCart(${item.id})">Xóa</button>
+                    </div>
                 </div>
             </div>
         `;
@@ -98,6 +99,6 @@ window.removeFromCart = function(foodId) {
     updatePage();
 };
 
-window.onload = function() {
-    updatePage();
-}
+document.addEventListener("DOMContentLoaded", updatePage);
+
+export { updateTotal, renderPaymentBox, updateBadgeCart };

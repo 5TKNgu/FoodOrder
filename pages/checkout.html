@@ -3,12 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Lobster&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FunnyBeef</title>
-    <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Lobster&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
-    <script type="module" src="../scripts/cart.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../scripts/checkout.js"></script>
+    <title>FunnyBeef</title>
 </head>
 
 <body class="flex flex-col min-h-screen">
@@ -45,7 +49,7 @@
             <a class="btn btn-ghost" href="../index.html#contact">Liên hệ</a>
         </div>
         <div id="cart" class="md:pr-10 md:pl-10 xl:pr-10">
-            <a href="#">
+            <a href="/cart">
                 <div tabindex="0" role="button" class="indicator btn btn-ghost btn-circle">
                     <div id="badgeCart" class="indicator-item badge badge-secondary">0</div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
@@ -61,29 +65,56 @@
             </a>
         </div>
     </div>
-    <div id="cartEmpty" class="hidden text-center pt-24">
-        <div class="text-2xl font-bold">Giỏ hàng trống</div>
-        <div class="text-lg">Hãy chọn món ăn yêu thích của bạn</div>
-        <img src="../public/empty_cart.png" alt="Empty cart" class="mx-auto my-4">
-        <div class="md:flex justify-center">
-            <a href="../index.html" class="btn btn-primary mt-4">Xem thực đơn</a>
+    <div class="pt-20">
+        <div class="px-3 flex flex-col items-center justify-center">
+            <h1 class="text-3xl font-playwrite">Thanh toán</h1>
+            <form class="w-full max-w-lg mt-5">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-first-name">
+                            Họ
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-first-name" type="text" placeholder="Nguyễn">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-last-name">
+                            Tên
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-last-name" type="text" placeholder="Phương">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-password">
+                            Địa chỉ
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-password" type="text" placeholder="123 Đường ABC, Phường XYZ, Quận 1">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-city">
+                            Thành phố
+                        </label>
+                        <input
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                            id="grid-city" type="text" placeholder="Hồ Chí Minh">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-
-    <main class="flex-grow pt-24">
-        <div id="cartEmpty" class="hidden text-center">
-            <div class="text-2xl font-bold">Giỏ hàng trống</div>
-            <div class="text-lg">Hãy chọn món ăn yêu thích của bạn</div>
-            <img src="../public/empty_cart.png" alt="Empty cart" class="mx-auto my-4">
-            <div class="md:flex justify-center">
-                <a href="../index.html" class="btn btn-primary mt-4">Xem thực đơn</a>
-            </div>
-        </div>
-        <div id="cartContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        </div>
-    </main>
-
-    <div id="paymentContainer" class="border border-gray-300 rounded-lg p-4">
+    <div id="paymentBox" class="border border-gray-300 rounded-lg p-4">
         <p class="text-l font-semibold mb-2">Sản phẩm trong giỏ hàng</p>
         <div id="products">
             <ul id="ulProducts" class="list-disc list-inside">
@@ -93,14 +124,11 @@
             <div class="flex items-center">
                 <div id="total" class="text-xl ml-2">0</div>
             </div>
-            <div class="ml-4"> 
-                <a href="/pages/checkout.html" class="btn btn-primary bg-yellow-500">Thanh toán</a>
+            <div class="ml-4">
+                <a href="#" class="btn btn-primary bg-yellow-500">Đặt hàng</a>
             </div>
         </div>
     </div>
-
-    
-    
     <footer class="bg-yellow-50 text-center p-4">
         <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
         <p>
