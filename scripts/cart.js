@@ -99,6 +99,8 @@ window.removeFromCart = function(foodId) {
     updatePage();
 };
 
-document.addEventListener("DOMContentLoaded", updatePage);
+window.onload = function() {
+    updatePage();
+}
 
-export { updateTotal, renderPaymentBox, updateBadgeCart };
+export {renderPaymentBox, updateTotal}

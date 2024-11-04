@@ -1,5 +1,6 @@
 
-import { updateTotal, renderPaymentBox,updateBadgeCart } from "./cart";
+import { updateTotal, renderPaymentBox } from "./cart";
+import { updateBadgeCart } from "./main";
 
 
 window.onload = function() {
