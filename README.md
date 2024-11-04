@@ -1,4 +1,6 @@
 # FoodOrder
+### [DEADLINE 11/11/2024]
+### Yêu Cầu: không sử dụng web framework
 Đề tài môn học: Xây dựng ứng dụng web đặt món ăn online
 
 Tham khảo: https://www.beefsteakveggies.com/
