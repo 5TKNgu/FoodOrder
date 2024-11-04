@@ -18,100 +18,124 @@ function renderCard(food) {
                 <h2 class="font-bold text-xl">${food.name}</h2>
                 <p class="text-gray-600">Giá: ${food.price.toLocaleString()} VNĐ</p>
                 <p class="text-gray-500">${food.description}</p>
-                <button onclick="addCart(${
-                  food.id
-                })" class="mt-4 bg-green-400 text-black px-4 py-2 bottom-0 rounded-lg hover:bg-green-100 font-playwrite">Thêm vào giỏ hàng</button>
+                <button id="${food.id}" onclick="addCart(${
+    food.id
+  })" class="mt-4 bg-green-400 text-black px-4 py-2 bottom-0 rounded-lg hover:bg-green-100 font-playwrite">Thêm vào giỏ hàng</button>
             </div>
         </div>
     `;
   return card;
 }
 
-function searchButton() {
-    const buttonIcon = document.getElementById("search");
-    const searchPopupClose = document.getElementById("searchPopupClose");
-    const searchPopup = document.getElementById("searchPopup");
-    const search = document.getElementById("startSearchButton");
-  
-    buttonIcon.addEventListener("click", () => {
-      if (searchPopup.classList.contains("hidden")) {
-        searchPopup.classList.remove("hidden");
-      } else {
-        searchPopup.classList.add("hidden");
-      }
-    });
-  
-    searchPopupClose.addEventListener("click", () => {
-      searchPopup.classList.add("hidden");
-    });
-  
-    search.addEventListener("click", () => {
-      console.log("search");
-      const query = document.getElementById("searchInput").value;
-      console.log(query);
-      if (query === "") {
-        searchPopup.classList.add("hidden");
-        return;
-      }
-  
-      const searchResultsClose = document.getElementById("searchResultsClose");
-      const searchResultsClose_2 = document.getElementById(
-        "searchResultsClose_2"
-      );
-      const searchResults = document.getElementById("searchResults");
-      searchResultsClose.addEventListener("click", () => {
-        searchResults.classList.add("hidden");
-      });
-      searchResultsClose_2.addEventListener("click", () => {
-        searchResults.classList.add("hidden");
-      });
-      searchResults.classList.remove("hidden");
-      searchPopup.classList.add("hidden");
-  
-      const results = fuzzySearch(query);
-      if (results.length === 0) {
-        const searchResultsContent = document.getElementById(
-          "searchResultsContent"
-        );
-        searchResultsContent.innerHTML = "Không tìm thấy kết quả phù hợp";
-        return;
-      }
-      renderSearchResults(results);
-    });
-  }
-  
-  function renderSearchResults(results) {
-    const searchResults = document.getElementById("searchResultsContent");
-    searchResults.innerHTML = "";
-  
-    results.forEach((result) => {
-      const card = renderCard(result.item);
-      searchResults.innerHTML += card;
-    });
-  }
-  
-  function fuzzySearch(query) {
-    const fuseOptions = {
-      keys: ["name", "description"],
-      threshold: 0.4,
-    };
-  
-    const fuse = new Fuse(
-      foods.map((food) => ({
-        ...food,
-        name: food.name.toLowerCase(),
-        description: food.description.toLowerCase(),
-      })),
-      fuseOptions
-    );
-    return fuse.search(query);
-  }
+function checkFoodExist(foodId) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  return cart.some((item) => item.id === foodId);
+}
 
-  
+function searchButton() {
+  const buttonIcon = document.getElementById("search");
+  const searchPopupClose = document.getElementById("searchPopupClose");
+  const searchPopup = document.getElementById("searchPopup");
+  const search = document.getElementById("startSearchButton");
+
+  buttonIcon.addEventListener("click", () => {
+    if (searchPopup.classList.contains("hidden")) {
+      searchPopup.classList.remove("hidden");
+    } else {
+      searchPopup.classList.add("hidden");
+    }
+  });
+
+  searchPopupClose.addEventListener("click", () => {
+    searchPopup.classList.add("hidden");
+  });
+
+  search.addEventListener("click", () => {
+    console.log("search");
+    const query = document.getElementById("searchInput").value;
+    console.log(query);
+    if (query === "") {
+      searchPopup.classList.add("hidden");
+      return;
+    }
+
+    const searchResultsClose = document.getElementById("searchResultsClose");
+    const searchResultsClose_2 = document.getElementById(
+      "searchResultsClose_2"
+    );
+    const searchResults = document.getElementById("searchResults");
+    searchResultsClose.addEventListener("click", () => {
+      searchResults.classList.add("hidden");
+    });
+    searchResultsClose_2.addEventListener("click", () => {
+      searchResults.classList.add("hidden");
+    });
+    searchResults.classList.remove("hidden");
+    searchPopup.classList.add("hidden");
+
+    const results = fuzzySearch(query);
+    if (results.length === 0) {
+      const searchResultsContent = document.getElementById(
+        "searchResultsContent"
+      );
+      searchResultsContent.innerHTML = "Không tìm thấy kết quả phù hợp";
+      return;
+    }
+    renderSearchResults(results);
+  });
+}
+
+function renderSearchResults(results) {
+  const searchResults = document.getElementById("searchResultsContent");
+  searchResults.innerHTML = "";
+
+  results.forEach((result) => {
+    const card = renderCard(result.item);
+    searchResults.innerHTML += card;
+    if (checkFoodExist(result.item.id)) {
+      changeAddCartButton(result.item.id);
+    }
+  });
+}
+
+function fuzzySearch(query) {
+  const fuseOptions = {
+    keys: ["name", "description"],
+    threshold: 0.4,
+  };
+
+  const fuse = new Fuse(
+    foods.map((food) => ({
+      ...food,
+      name: food.name.toLowerCase(),
+      description: food.description.toLowerCase(),
+    })),
+    fuseOptions
+  );
+  return fuse.search(query);
+}
+
+function changeAddCartButton(foodId) {
+  const button_element = document.getElementById(`${foodId}`);
+  button_element.disabled = true;
+  button_element.classList.add("bg-gray-500");
+  button_element.innerHTML = "Đã thêm vào giỏ hàng";
+}
+
 function updateBadgeCart() {
-  var badgeCart = document.getElementById('badgeCart');
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  var badgeCart = document.getElementById("badgeCart");
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
   badgeCart.innerHTML = cart.length;
 }
 
-export { foods, fetchData, searchButton, fuzzySearch, renderSearchResults, renderCard, updateBadgeCart };
+export {
+  foods,
+  fetchData,
+  searchButton,
+  fuzzySearch,
+  renderSearchResults,
+  renderCard,
+  updateBadgeCart,
+  checkFoodExist,
+  changeAddCartButton,
+};

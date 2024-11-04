@@ -1,4 +1,12 @@
-import { foods, fetchData, searchButton, renderCard, updateBadgeCart } from "./main";
+import {
+  changeAddCartButton,
+  checkFoodExist,
+  foods,
+  fetchData,
+  searchButton,
+  renderCard,
+  updateBadgeCart,
+} from "./main";
 
 const itemsPerPage = 10;
 let currentPage = 1;
@@ -27,6 +35,9 @@ function renderCards(page) {
   pageItems.forEach((food) => {
     const card = renderCard(food);
     cardContainer.innerHTML += card;
+    if (checkFoodExist(food.id)) {
+      changeAddCartButton(food.id);
+    }
   });
 }
 
@@ -67,17 +78,17 @@ document.getElementById("next").addEventListener("click", () => {
   }
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault(); // Ngăn chặn hành vi mặc định
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault(); // Ngăn chặn hành vi mặc định
 
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth' // Cuộn mượt mà
-            });
-        }
-    });
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth", // Cuộn mượt mà
+      });
+    }
+  });
 });
 
 window.addCart = function (foodId) {
@@ -100,6 +111,7 @@ window.addCart = function (foodId) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     updateBadgeCart();
+    changeAddCartButton(foodId);
   }
 };
 
