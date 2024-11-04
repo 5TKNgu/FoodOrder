@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="icon" href="/public/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -29,9 +29,9 @@
       </label>
       <ul id="dropdownContent"
         class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-yellow-50 rounded-box w-52">
-        <li><a href="#home" class="btn btn-ghost">Trang chủ</a></li>
+        <li><a href="#home" target="_self" class="btn btn-ghost">Trang chủ</a></li>
         <li>
-          <a href="#menu" class="btn btn-ghost">
+          <a href="#menu" target="_self" class="btn btn-ghost">
             Thực đơn
           </a>
         </li>
@@ -41,7 +41,7 @@
       </ul>
     </div>
     <div class="flex-1">
-      <a class="btn btn-ghost text-xl font-lobster">
+      <a class="btn btn-ghost text-xl font-lobster" href="/">
         FunnyBeef
         <img src="./public/logo.png" alt="logo" class="w-8 h-8" />
       </a>
@@ -132,7 +132,7 @@
         <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,200px,0)] taos:opacity-0"
           data-taos-offset="300">
           <a href="#menu">
-            <button class="btn primary-second mt-4 bg-yellow-50 px-6 py-2 rounded-lg font-playwrite">
+            <button class="btn primary-second mt-4 bg-green-400 px-6 py-2 rounded-lg font-playwrite">
               Xem thực đơn
             </button>
           </a>

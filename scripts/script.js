@@ -67,6 +67,19 @@ document.getElementById("next").addEventListener("click", () => {
   }
 });
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngăn chặn hành vi mặc định
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth' // Cuộn mượt mà
+            });
+        }
+    });
+});
+
 window.addCart = function (foodId) {
   const foodItem = foods.find((food) => food.id === foodId);
   if (foodItem) {
@@ -82,6 +95,7 @@ window.addCart = function (foodId) {
         price: foodItem.price,
         quantity: 1,
         image: foodItem.image,
+        description: foodItem.description,
       });
     }
     localStorage.setItem("cart", JSON.stringify(cart));
