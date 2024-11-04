@@ -19,6 +19,7 @@ function renderCart() {
             <img src="../${item.image}" alt="${item.name}" class="w-full h-32 object-cover rounded-t-lg mx-auto">
             <div class="p-4">
                 <h2 class="font-bold text-lg">${item.name}</h2>
+                <p class="text-gray-500">${item.description}</p>
                 <p class="text-gray-600">Giá: ${item.price.toLocaleString()} VNĐ</p>
                 <div class="flex items-center justify-between mt-2">
                     <div class="flex items-center">

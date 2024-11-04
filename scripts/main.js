@@ -20,7 +20,7 @@ function renderCard(food) {
                 <p class="text-gray-500">${food.description}</p>
                 <button onclick="addCart(${
                   food.id
-                })" class="mt-4 bg-yellow-100 text-black px-4 py-2 bottom-0 rounded-lg hover:bg-yellow-50">Thêm vào giỏ hàng</button>
+                })" class="mt-4 bg-green-400 text-black px-4 py-2 bottom-0 rounded-lg hover:bg-green-100 font-playwrite">Thêm vào giỏ hàng</button>
             </div>
         </div>
     `;

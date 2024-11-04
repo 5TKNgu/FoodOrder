@@ -23,7 +23,7 @@
           </label>
           <ul id="dropdownContent"
             class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-yellow-50 rounded-box w-52">
-            <li><a href="../index.html#home" class="btn btn-ghost">Trang chủ</a></li>
+            <li><a href="/" class="btn btn-ghost">Trang chủ</a></li>
             <li>
               <a href="../index.html#menu" class="btn btn-ghost">
                 Thực đơn
@@ -35,13 +35,13 @@
           </ul>
         </div>
         <div class="flex-1">
-          <a class="btn btn-ghost text-xl font-lobster" href="../index.html">
+          <a class="btn btn-ghost text-xl font-lobster" href="/">
             FunnyBeef
             <img src="../public/logo.png" alt="logo" class="w-8 h-8" />
           </a>
         </div>
         <div id="mdNavbar" class="hidden md:flex">
-          <a class="btn btn-ghost" href="../index.html#home">Trang chủ</a>
+          <a class="btn btn-ghost" href="/">Trang chủ</a>
           <a class="btn btn-ghost" href="../index.html#menu">Thực đơn</a>
           <a class="btn btn-ghost" href="./contact.html">Liên hệ</a>
         </div>
@@ -62,24 +62,16 @@
           </a>
         </div>
       </div>
-    <div id="cartEmpty" class="hidden text-center pt-24">
+    <div id="cartEmpty" class="hidden text-center pt-20 pb-7">
         <div class="text-2xl font-bold">Giỏ hàng trống</div>
         <div class="text-lg">Hãy chọn món ăn yêu thích của bạn</div>
         <img src="../public/empty_cart.png" alt="Empty cart" class="mx-auto my-4">
         <div class="md:flex justify-center">
-            <a href="../index.html" class="btn btn-primary mt-4">Xem thực đơn</a>
+            <a href="../index.html" class="btn btn-primary mt-4 bg-green-400">Xem thực đơn</a>
         </div>
     </div>
 
-    <main class="flex-grow pt-24">
-        <div id="cartEmpty" class="hidden text-center">
-            <div class="text-2xl font-bold">Giỏ hàng trống</div>
-            <div class="text-lg">Hãy chọn món ăn yêu thích của bạn</div>
-            <img src="../public/empty_cart.png" alt="Empty cart" class="mx-auto my-4">
-            <div class="md:flex justify-center">
-                <a href="../index.html" class="btn btn-primary mt-4">Xem thực đơn</a>
-            </div>
-        </div>
+    <main class="flex-grow pt-24 pb-7">
         <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,-200px,0)_scale(0.6)] taos:opacity-0"
             data-taos-offset="500">
             <div id="cartContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -101,7 +93,7 @@
                 <div id="total" class="text-xl ml-2">0</div>
             </div>
             <div class="ml-4">
-                <a href="/pages/checkout.html" class="btn btn-primary bg-yellow-500">Thanh toán</a>
+                <a href="/pages/checkout.html" class="btn btn-primary bg-green-400">Thanh toán</a>
             </div>
         </div>
     </div>
@@ -110,7 +102,7 @@
           <div class="absolute inset-0">
             <img src="https://www.libaisaigon.com/resourcefiles/faq-image-home/libaispace.jpg" alt="background"
               class="w-full h-full object-cover opacity-50" />
-            <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Lớp phủ màu đen -->
+            <div class="absolute inset-0 bg-black opacity-50"></div>
           </div>
           <div class="flex flex-col lg:flex-row justify-center w-full relative z-10">
             <div id="descriptionContent"

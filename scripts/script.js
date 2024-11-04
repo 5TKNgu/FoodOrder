@@ -82,6 +82,7 @@ window.addCart = function (foodId) {
         price: foodItem.price,
         quantity: 1,
         image: foodItem.image,
+        description: foodItem.description,
       });
     }
     localStorage.setItem("cart", JSON.stringify(cart));
