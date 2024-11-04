@@ -65,55 +65,62 @@
             </a>
         </div>
     </div>
-    <div class="pt-20">
-        <div class="px-3 flex flex-col items-center justify-center">
-            <h1 class="text-3xl font-playwrite">Thanh toán</h1>
-            <form class="w-full max-w-lg mt-5">
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                            for="grid-first-name">
-                            Họ
-                        </label>
-                        <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                            id="grid-first-name" type="text" placeholder="Nguyễn">
+    <div class="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
+        <div class="pt-20">
+            <div class="px-3 flex flex-col items-center justify-center">
+                <h1 class="text-3xl font-playwrite">Thanh toán</h1>
+                <form class="w-full max-w-lg mt-5" id="checkoutForm">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label
+                                class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                for="grid-first-name">
+                                Họ
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                id="grid-first-name" type="text" placeholder="Nguyễn">
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label
+                                class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                for="grid-last-name">
+                                Tên
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                                id="grid-last-name" type="text" placeholder="Phương" required>
+                        </div>
                     </div>
-                    <div class="w-full md:w-1/2 px-3">
-                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                            for="grid-last-name">
-                            Tên
-                        </label>
-                        <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
-                            id="grid-last-name" type="text" placeholder="Phương">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label
+                                class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                for="grid-password">
+                                Địa chỉ
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                id="grid-password" type="text" placeholder="123 Đường ABC, Phường XYZ, Quận 1" required>
+                        </div>
                     </div>
-                </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full px-3">
-                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                            for="grid-password">
-                            Địa chỉ
-                        </label>
-                        <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                            id="grid-password" type="text" placeholder="123 Đường ABC, Phường XYZ, Quận 1">
+                    <div id="numberPhone" class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label
+                                class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                for="grid-password">
+                                Số điện thoại
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                id="grid-password" type="text" placeholder="0123456789" required>
+                        </div>
                     </div>
-                </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                        <label class="font-playwrite block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                            for="grid-city">
-                            Thành phố
-                        </label>
-                        <input
-                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
-                            id="grid-city" type="text" placeholder="Hồ Chí Minh">
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
+
     <div id="paymentBox" class="border border-gray-300 rounded-lg p-4">
         <p class="text-l font-semibold mb-2">Sản phẩm trong giỏ hàng</p>
         <div id="products">
@@ -129,12 +136,54 @@
             </div>
         </div>
     </div>
-    <footer class="bg-yellow-50 text-center p-4">
-        <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
-        <p>
-            Website by <a href="https://www.facebook.com/phuong0ngu" class="text-blue-500">Nguyễn Tấn Phương</a>
-        </p>
+    <footer>
+        <section id="description" class="mb-6 bg-white p-6 rounded-lg shadow-lg relative">
+            <div class="absolute inset-0">
+                <img src="https://www.libaisaigon.com/resourcefiles/faq-image-home/libaispace.jpg" alt="background"
+                    class="w-full h-full object-cover opacity-50" />
+                <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Lớp phủ màu đen -->
+            </div>
+            <div class="flex flex-col lg:flex-row justify-center w-full relative z-10">
+                <div id="descriptionContent"
+                    class="flex flex-col justify-center items-center pt-10 text-black text-center w-full xl:max-w-2xl lg:mr-10">
+                    <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,-200px,0)] taos:opacity-0"
+                        data-taos-offset="500">
+                        <h2 class="font-bold text-4xl mb-4 text-yellow-500 font-lobster">Về chúng tôi</h2>
+                    </div>
+
+                    <p class="text-xl leading-relaxed text-gray-700">
+                    <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,-200px,0)] taos:opacity-0"
+                        data-taos-offset="500">
+                        <span class="font-playwrite text-white">FunnyBeef - Nơi Hương Vị Gặp Nụ Cười</span><br>
+                        <p class="font-playwrite text-white">
+                            Tọa lạc giữa lòng thành phố, FunnyBeef mang đến trải nghiệm ẩm thực độc đáo. Không gian ấm
+                            cúng, trang trí
+                            hài
+                            hước, và thực đơn phong phú với các món bò ngon lành khiến mọi người không thể không cười.
+                            Chủ nhân, anh
+                            Phương,
+                            luôn sáng tạo những món ăn đi kèm với những câu đùa dí dỏm. Đến với FunnyBeef, bạn không chỉ
+                            thưởng thức
+                            bữa
+                            ăn mà còn tận hưởng những khoảnh khắc vui vẻ bên bạn bè và gia đình!
+                        </p>
+                    </div>
+                    </p>
+                </div>
+                <div class="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0 flex justify-center pt-5"
+                    data-taos-offset="400">
+                    <img src="../public/chef.png" alt="chef image">
+                </div>
+            </div>
+        </section>
+        <div class="bg-yellow-50 p-4 text-center">
+            <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
+            <p>
+                Website by <a href="https://www.facebook.com/phuong0ngu" class="text-blue-500">Nguyễn Tấn Phương</a>
+            </p>
+        </div>
     </footer>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 
 </html>

@@ -4,18 +4,25 @@
 Tham khảo: https://www.beefsteakveggies.com/
 
 ##### Demo
-<img src="./demo/home.png" alt="demo" width="100%">
-<img src="./demo/menu.png" alt="demo" width="100%">
-<img src="./demo/description.png" alt="demo" width="100%">
-<img src="./demo/emty_cart.png" alt="demo" width="100%">
-<img src="./demo/cart.png" alt="demo" width="100%">
-<img src="./demo/checkout.png" alt="demo" width="100%">
+<h3 align="center">Header</h3>
+<img src="./demo/header.png" alt="header" width="100%">
+<h3 align="center">Menu</h3>
+<img src="./demo/menu.png" alt="menu" width="100%">
+<h3 align="center">Empty cart</h3>
+<img src="./demo/emty_cart.png" alt="emty_cart" width="100%">
+<h3 align="center">Cart</h3>
+<img src="./demo/cart.png" alt="cart" width="100%">
+<h3 align="center">Checkout</h3>
+<img src="./demo/checkout.png" alt="checkout" width="100%">
+<h3 align="center">Footer</h3>
+<img src="./demo/footer.png" alt="footer" width="100%">
 
 ###### TechStack
 - HTML
 - Tailwind CSS (plugin: [daisyUI](https://daisyui.com/))
 - Vite
 - Fuse.js (Chức năng tìm kiếm)
+- Tailwind CSS Animation on Scroll [TAOS](https://versoly.com/taos)
 
 
 ###### Mô tả
@@ -31,7 +38,7 @@ Trang web đặt món ăn online, cho phép người dùng xem menu, thêm món 
 ##### Chức năng
 - Home page
     - [x] Navbar
-    - [x] Mô tả
+    - [x] Header
     - [x] Menu
     - [x] Responsive
 

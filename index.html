@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="/scripts/script.js"></script>
+  <script>document.documentElement.classList.add('js')</script>
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
@@ -33,7 +35,7 @@
             Thực đơn
           </a>
         </li>
-        <li><a href="#contact" class="btn btn-ghost">Liên hệ</a></li>
+        <li><a href="/pages/contact.html" class="btn btn-ghost">Liên hệ</a></li>
         <li><a href="#description" class="btn btn-ghost">Về chúng tôi</a></li>
         <li><a href="#" class="btn btn-ghost">Fanpage</a></li>
       </ul>
@@ -47,7 +49,7 @@
     <div id="mdNavbar" class="hidden md:flex">
       <a class="btn btn-ghost" href="#home">Trang chủ</a>
       <a class="btn btn-ghost" href="#menu">Thực đơn</a>
-      <a class="btn btn-ghost" href="#contact">Liên hệ</a>
+      <a class="btn btn-ghost" href="/pages/contact.html">Liên hệ</a>
     </div>
     <div id="search">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle" id="searchButton">
@@ -77,44 +79,49 @@
       </a>
     </div>
   </div>
-  <div id="searchPopup" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-30">
-    <div class="search-popup-content bg-white w-11/12 md:w-1/2 lg:w-1/3 xl:w-1/4 p-8 rounded shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center">
-      <a class="btn btn-ghost text-xl font-lobster flex items-center justify-center mb-6">
-        FunnyBeef
-        <img src="./public/logo.png" alt="logo" class="w-10 h-10 ml-2" />
-      </a>
-      <div id="searchPopupClose" class="absolute top-0 right-0 p-2 cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </div>
-      <input id="searchInput" type="text" class="w-full p-2 border border-gray-300 rounded" placeholder="Món ăn mà bạn iu~" />
-      <button id="startSearchButton" class="btn primary mt-4 w-full bg-yellow-100">Tìm kiếm</button>
-    </div>
-  </div>
-  
-  <div id="searchResults" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-30">
-    <div
-      class="search-popup-content bg-white w-[90vw] h-[90vh] p-8 rounded shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-y-auto">
-      <a class="btn btn-ghost text-xl font-lobster">
-        FunnyBeef
-        <img src="./public/logo.png" alt="logo" class="w-8 h-8" />
-      </a>
-      <div>
-        <h2 class="font-bold text-2xl text-center font-playwrite">Kết quả tìm kiếm</h2>
-      </div>
-      <div id="searchResultsClose" class="absolute top-0 right-0 p-2 cursor-pointer ">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </div>
-      <div id="searchResultsContent" class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-y-auto">
-      </div>
-      <div id="searchResultsClose_2">
-        <button class="btn primary mt-4 w-full bg-yellow-100">Đóng</button>
+  <section id="search">
+
+    <div id="searchPopup" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-30">
+      <div
+        class="search-popup-content bg-white w-11/12 md:w-1/2 lg:w-1/3 xl:w-1/4 p-8 rounded shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center">
+        <a class="btn btn-ghost text-xl font-lobster flex items-center justify-center mb-6">
+          FunnyBeef
+          <img src="./public/logo.png" alt="logo" class="w-10 h-10 ml-2" />
+        </a>
+        <div id="searchPopupClose" class="absolute top-0 right-0 p-2 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <input id="searchInput" type="text" class="w-full p-2 border border-gray-300 rounded"
+          placeholder="Món ăn mà bạn iu~" />
+        <button id="startSearchButton" class="btn primary mt-4 w-full bg-yellow-100">Tìm kiếm</button>
       </div>
     </div>
-  </div>
+    <div id="searchResults" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-30">
+      <div
+        class="search-popup-content bg-white w-[90vw] h-[90vh] p-8 rounded shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-y-auto">
+        <a class="btn btn-ghost text-xl font-lobster">
+          FunnyBeef
+          <img src="./public/logo.png" alt="logo" class="w-8 h-8" />
+        </a>
+        <div>
+          <h2 class="font-bold text-2xl text-center font-playwrite">Kết quả tìm kiếm</h2>
+        </div>
+        <div id="searchResultsClose" class="absolute top-0 right-0 p-2 cursor-pointer ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <div id="searchResultsContent"
+          class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-y-auto">
+        </div>
+        <div id="searchResultsClose_2">
+          <button class="btn primary mt-4 w-full bg-yellow-100">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="home" class="pt-24 mb-6 bg-white p-4 rounded shadow relative">
     <div class="flex flex-col md:flex-row justify-center items-center w-full">
@@ -122,45 +129,62 @@
         <h2 class="font-bold text-4xl md:text-5xl font-lobster">FunnyBeef</h2>
         <p id="typing" class="font-playwrite text-xl md:text-3xl pt-2 text-center text-gray-800 relative inline-block">
         </p>
-        <a href="#menu">
-          <button class="btn primary-second mt-4 bg-yellow-50 px-6 py-2 rounded-lg font-playwrite">
-            Xem thực đơn
-          </button>
-        </a>
+        <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,200px,0)] taos:opacity-0"
+          data-taos-offset="300">
+          <a href="#menu">
+            <button class="btn primary-second mt-4 bg-yellow-50 px-6 py-2 rounded-lg font-playwrite">
+              Xem thực đơn
+            </button>
+          </a>
+        </div>
       </div>
-      <img src="image/best.jpg" alt="best_seller" class="rounded-full md:w-1/2 lg:w-1/3 mt-6 md:mt-0 md:ml-10" />
+      <div
+        class="delay-[300ms] duration-[600ms] taos:translate-x-[200px] taos:opacity-0 md:w-1/2 lg:w-1/3 mt-6 md:mt-0 md:ml-10"
+        data-taos-offset="400">
+        <img src="image/best.jpg" alt="best_seller" class="rounded-full" />
+      </div>
     </div>
   </section>
   <div class="border-t border-gray-300 my-6"></div>
-  <section id="recommend" class="">
-    <div class="w-full relative">
+  <section id="recommend" class="relative">
+    <div class="absolute inset-0">
+      <img src="https://www.libaisaigon.com/resourcefiles/mainimages/entrance.png" alt="background"
+        class="w-full h-full object-cover opacity-50" />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+    </div>
+    <div class="w-full relative z-10">
       <div class="swiper progress-slide-carousel swiper-container relative">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
+            <div class="rounded-2xl h-96 flex justify-center items-center">
               <span class="text-3xl font-semibold text-indigo-600">
-                <img src="/image/id_20.jpg" alt="id_10" class="w-full h-full" />
+                <img src="/image/id_17.jpg" alt="id_10" class="w-auto h-auto rounded-full" />
               </span>
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-              <img src="/image/best.jpg" alt="id_10" class="w-auto h-auto" />
+            <div class="rounded-2xl h-96 flex justify-center items-center">
+              <img src="/image/id_2.jpg" alt="id_10" class="w-auto h-auto rounded-full" />
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-              <img src="/image/beefsteak_bo_my.jpg" alt="id_10" class="w-auto h-auto" />
+            <div class="rounded-2xl h-96 flex justify-center items-center">
+              <img src="/image/beefsteak_bo_my.jpg" alt="id_10" class="w-auto h-auto rounded-full" />
             </div>
           </div>
         </div>
         <div class="swiper-pagination !bottom-2 !top-auto !w-80 right-0 mx-auto bg-gray-100"></div>
       </div>
     </div>
-
   </section>
+
   <div class="border-t border-gray-300 my-6"></div>
   <section id="menu" class="mb-6 bg-white p-4 rounded shadow">
+    <div
+      class="flex justify-center delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,-200px,0)_scale(0.6)] taos:opacity-0"
+      data-taos-offset="500">
+      <h2 class="font-bold text-4xl mb-10 text-yellow-500 font-lobster">Thực đơn</h2>
+    </div>
     <div id="card-container" class=" top-20 px-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     </div>
     <div class="flex justify-center mt-6">
@@ -175,28 +199,43 @@
   </section>
 
   <div class=" border-t border-gray-300 my-6"></div>
-  <section id="description" class="mb-6 bg-white p-6 rounded-lg shadow-lg">
-    <div class="flex justify-center w-full">
-      <div id="descriptionContent"
-        class="flex flex-col justify-center items-center pt-10 text-black text-center w-full xl:max-w-2xl">
-        <h2 class="font-bold text-4xl mb-4 text-yellow-500 font-lobster">Về chúng tôi</h2>
-        <p class="text-xl leading-relaxed text-gray-700">
-          <span class="font-playwrite">FunnyBeef - Nơi Hương Vị Gặp Nụ Cười</span><br>
-        <p class="font-playwrite">
-          Tọa lạc giữa lòng thành phố, FunnyBeef mang đến trải nghiệm ẩm thực độc đáo. Không gian ấm cúng, trang trí hài
-          hước, và thực đơn phong phú với các món bò ngon lành khiến mọi người không thể không cười. Chủ nhân, anh Phương,
-          luôn sáng tạo những món ăn đi kèm với những câu đùa dí dỏm. Đến với FunnyBeef, bạn không chỉ thưởng thức bữa
-          ăn mà còn tận hưởng những khoảnh khắc vui vẻ bên bạn bè và gia đình!
-        </p>
-        </p>
-      </div>
-    </div>
-    <div class="flex justify-center pt-5">
-      <img src="./public/chef.png">
-    </div>
-  </section>
-
   <footer>
+    <section id="description" class="mb-6 bg-white p-6 rounded-lg shadow-lg relative">
+      <div class="absolute inset-0">
+        <img src="https://www.libaisaigon.com/resourcefiles/faq-image-home/libaispace.jpg" alt="background"
+          class="w-full h-full object-cover opacity-50" />
+        <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Lớp phủ màu đen -->
+      </div>
+      <div class="flex flex-col lg:flex-row justify-center w-full relative z-10">
+        <div id="descriptionContent"
+          class="flex flex-col justify-center items-center pt-10 text-black text-center w-full xl:max-w-2xl lg:mr-10">
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,-200px,0)] taos:opacity-0"
+            data-taos-offset="500">
+            <h2 class="font-bold text-4xl mb-4 text-yellow-500 font-lobster">Về chúng tôi</h2>
+          </div>
+
+          <p class="text-xl leading-relaxed text-gray-700">
+          <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,-200px,0)] taos:opacity-0"
+            data-taos-offset="500">
+            <span class="font-playwrite text-white">FunnyBeef - Nơi Hương Vị Gặp Nụ Cười</span><br>
+            <p class="font-playwrite text-white">
+              Tọa lạc giữa lòng thành phố, FunnyBeef mang đến trải nghiệm ẩm thực độc đáo. Không gian ấm cúng, trang trí
+              hài
+              hước, và thực đơn phong phú với các món bò ngon lành khiến mọi người không thể không cười. Chủ nhân, anh
+              Phương,
+              luôn sáng tạo những món ăn đi kèm với những câu đùa dí dỏm. Đến với FunnyBeef, bạn không chỉ thưởng thức
+              bữa
+              ăn mà còn tận hưởng những khoảnh khắc vui vẻ bên bạn bè và gia đình!
+            </p>
+          </div>
+          </p>
+        </div>
+        <div class="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0 flex justify-center pt-5"
+          data-taos-offset="400">
+          <img src="./public/chef.png" alt="chef image">
+        </div>
+      </div>
+    </section>
     <div class="bg-yellow-50 p-4 text-center">
       <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
       <p>
@@ -204,6 +243,7 @@
       </p>
     </div>
   </footer>
+  <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 
 </html>

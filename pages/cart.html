@@ -7,60 +7,61 @@
     <title>FunnyBeef</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Lobster&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kavivanar&family=Lobster&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
     <script type="module" src="../scripts/cart.js"></script>
 </head>
 
 <body class="flex flex-col min-h-screen">
     <div class="navbar fixed bg-yellow-50 z-20">
         <div class="dropdown">
-            <label tabindex="0" class="md:hidden btn btn-ghost btn-circle" id="dropdownButton">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-                </svg>
-            </label>
-            <ul id="dropdownContent"
-                class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-yellow-50 rounded-box w-52">
-                <li><a href="../index.html" class="btn btn-ghost">Trang chủ</a></li>
-                <li>
-                    <a href="../index.html#menu" class="btn btn-ghost">
-                        Thực đơn
-                    </a>
-                </li>
-                <li><a href="../index.html#contact" class="btn btn-ghost">Liên hệ</a></li>
-                <li><a href="../index.html#description" class="btn btn-ghost">Về chúng tôi</a></li>
-                <li><a href="#" class="btn btn-ghost">Fanpage</a></li>
-            </ul>
+          <label tabindex="0" class="md:hidden btn btn-ghost btn-circle" id="dropdownButton">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </label>
+          <ul id="dropdownContent"
+            class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-yellow-50 rounded-box w-52">
+            <li><a href="../index.html#home" class="btn btn-ghost">Trang chủ</a></li>
+            <li>
+              <a href="../index.html#menu" class="btn btn-ghost">
+                Thực đơn
+              </a>
+            </li>
+            <li><a href="/contact.html" class="btn btn-ghost">Liên hệ</a></li>
+            <li><a href="../index.html#description" class="btn btn-ghost">Về chúng tôi</a></li>
+            <li><a href="#" class="btn btn-ghost">Fanpage</a></li>
+          </ul>
         </div>
         <div class="flex-1">
-            <a class="btn btn-ghost text-xl font-lobster" href="../index.html">
-                FunnyBeef
-                <img src="../public/logo.png" alt="logo" class="w-8 h-8" />
-            </a>
+          <a class="btn btn-ghost text-xl font-lobster" href="../index.html">
+            FunnyBeef
+            <img src="../public/logo.png" alt="logo" class="w-8 h-8" />
+          </a>
         </div>
         <div id="mdNavbar" class="hidden md:flex">
-            <a class="btn btn-ghost" href="../index.html#home">Trang chủ</a>
-            <a class="btn btn-ghost" href="../index.html#menu">Thực đơn</a>
-            <a class="btn btn-ghost" href="../index.html#contact">Liên hệ</a>
+          <a class="btn btn-ghost" href="../index.html#home">Trang chủ</a>
+          <a class="btn btn-ghost" href="../index.html#menu">Thực đơn</a>
+          <a class="btn btn-ghost" href="./contact.html">Liên hệ</a>
         </div>
-        <div id="cart" class="md:pr-10 md:pl-10 xl:pr-10">
-            <a href="#">
-                <div tabindex="0" role="button" class="indicator btn btn-ghost btn-circle">
-                    <div id="badgeCart" class="indicator-item badge badge-secondary">0</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
-                        width="48" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <circle cx="9" cy="19" r="2" />
-                        <circle cx="17" cy="19" r="2" />
-                        <path d="M17 17h-11v-14h-2" />
-                        <path d="M6 5l14 1l-1 7h-13" />
-                    </svg>
-                </div>
-            </a>
+        <div id="cart" class="md:pr-2">
+          <a href="/cart.html">
+            <div tabindex="0" role="button" class="indicator btn btn-ghost btn-circle">
+              <div id="badgeCart" class="indicator-item badge badge-secondary">0</div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="48"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="9" cy="19" r="2" />
+                <circle cx="17" cy="19" r="2" />
+                <path d="M17 17h-11v-14h-2" />
+                <path d="M6 5l14 1l-1 7h-13" />
+              </svg>
+            </div>
+          </a>
         </div>
-    </div>
+      </div>
     <div id="cartEmpty" class="hidden text-center pt-24">
         <div class="text-2xl font-bold">Giỏ hàng trống</div>
         <div class="text-lg">Hãy chọn món ăn yêu thích của bạn</div>
@@ -79,11 +80,17 @@
                 <a href="../index.html" class="btn btn-primary mt-4">Xem thực đơn</a>
             </div>
         </div>
-        <div id="cartContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,-200px,0)_scale(0.6)] taos:opacity-0"
+            data-taos-offset="500">
+            <div id="cartContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            </div>
         </div>
     </main>
 
     <div id="paymentContainer" class="border border-gray-300 rounded-lg p-4">
+        <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(0,200px,0)_scale(0.6)] taos:opacity-0"
+            data-taos-offset="300">
+        </div>
         <p class="text-l font-semibold mb-2">Sản phẩm trong giỏ hàng</p>
         <div id="products">
             <ul id="ulProducts" class="list-disc list-inside">
@@ -93,20 +100,56 @@
             <div class="flex items-center">
                 <div id="total" class="text-xl ml-2">0</div>
             </div>
-            <div class="ml-4"> 
+            <div class="ml-4">
                 <a href="/pages/checkout.html" class="btn btn-primary bg-yellow-500">Thanh toán</a>
             </div>
         </div>
     </div>
-
+    <footer>
+        <section id="description" class="mb-6 bg-white p-6 rounded-lg shadow-lg relative">
+          <div class="absolute inset-0">
+            <img src="https://www.libaisaigon.com/resourcefiles/faq-image-home/libaispace.jpg" alt="background"
+              class="w-full h-full object-cover opacity-50" />
+            <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Lớp phủ màu đen -->
+          </div>
+          <div class="flex flex-col lg:flex-row justify-center w-full relative z-10">
+            <div id="descriptionContent"
+              class="flex flex-col justify-center items-center pt-10 text-black text-center w-full xl:max-w-2xl lg:mr-10">
+              <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,-200px,0)] taos:opacity-0"
+                data-taos-offset="500">
+                <h2 class="font-bold text-4xl mb-4 text-yellow-500 font-lobster">Về chúng tôi</h2>
+              </div>
     
-    
-    <footer class="bg-yellow-50 text-center p-4">
-        <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
-        <p>
+              <p class="text-xl leading-relaxed text-gray-700">
+              <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,-200px,0)] taos:opacity-0"
+                data-taos-offset="500">
+                <span class="font-playwrite text-white">FunnyBeef - Nơi Hương Vị Gặp Nụ Cười</span><br>
+                <p class="font-playwrite text-white">
+                  Tọa lạc giữa lòng thành phố, FunnyBeef mang đến trải nghiệm ẩm thực độc đáo. Không gian ấm cúng, trang trí
+                  hài
+                  hước, và thực đơn phong phú với các món bò ngon lành khiến mọi người không thể không cười. Chủ nhân, anh
+                  Phương,
+                  luôn sáng tạo những món ăn đi kèm với những câu đùa dí dỏm. Đến với FunnyBeef, bạn không chỉ thưởng thức
+                  bữa
+                  ăn mà còn tận hưởng những khoảnh khắc vui vẻ bên bạn bè và gia đình!
+                </p>
+              </div>
+              </p>
+            </div>
+            <div class="delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0 flex justify-center pt-5"
+              data-taos-offset="400">
+              <img src="../public/chef.png" alt="chef image">
+            </div>
+          </div>
+        </section>
+        <div class="bg-yellow-50 p-4 text-center">
+          <p class="text-gray-800 font-bold">FunnyBeef &copy; 2024</p>
+          <p>
             Website by <a href="https://www.facebook.com/phuong0ngu" class="text-blue-500">Nguyễn Tấn Phương</a>
-        </p>
-    </footer>
+          </p>
+        </div>
+      </footer>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 
 </html>
